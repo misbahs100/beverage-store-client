@@ -11,7 +11,8 @@ const AddBeverage = () => {
         
         const beverageData = {
             name: data.name,
-            imageURL: imageURL
+            imageURL: imageURL,
+            price: data.price
         }
         console.log(beverageData)
         fetch('http://localhost:5055/addBeverage', {
@@ -51,6 +52,8 @@ const AddBeverage = () => {
             <h2>This is add.</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input name="name" ref={register} placeholder="Bevereage Name"/>
+                <br/>
+                <input name="price" ref={register} placeholder="Bevereage Price"/>
                 <br/>
                 <input name="exampleRequired" type="file" ref={register} onChange={handleImageUpload}/>
                 <br/>

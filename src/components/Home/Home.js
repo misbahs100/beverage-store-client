@@ -10,10 +10,12 @@ const Home = () => {
         .then(data => setBeverages(data))
     }, [])
     return (
-        <div className="row">
+        <div className="container">
+            <div className="row">
             {
                 beverages.map(beverage => <Beverage beverage={beverage}></Beverage>)
             }
+        </div>
         </div>
     );
 };

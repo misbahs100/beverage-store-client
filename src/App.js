@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import AddBeverage from './components/AddBeverage/AddBeverage';
 import Header from './components/Header/Header';
 import Admin from './components/Admin/Admin';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/addBeverage">
           <AddBeverage></AddBeverage>
+        </Route>
+        <Route path="/checkout/:id">
+          <Checkout></Checkout>
         </Route>
       </Switch>
     </Router>
