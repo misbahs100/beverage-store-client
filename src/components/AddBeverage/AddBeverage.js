@@ -23,6 +23,7 @@ const AddBeverage = () => {
         })
         .then(res => {
             console.log('server side response', res);
+            alert('Beverage Added Successfully.')
         })
         
     };
