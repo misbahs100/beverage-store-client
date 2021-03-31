@@ -31,7 +31,7 @@ const Login = () => {
                 const newUser = {
                     name: user.displayName,
                     email: user.email,
-                    image: user.photoURL
+                    userImage: user.photoURL
                 }
                 setLoggedInUser(newUser)
                 history.replace(from);

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 import './Checkout.css';
 
 const Checkout = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const {id} = useParams();
     const [beverage, setBeverage] = useState({});
     useEffect(() => {
@@ -10,6 +12,27 @@ const Checkout = () => {
         .then(res => res.json())
         .then(data => setBeverage(data))
     }, [])
+
+    const order = {
+        email: loggedInUser.email,
+        beverageName: beverage.name,
+        beveragePrice: beverage.price,
+        beverageImage: beverage.imageURL
+    }
+
+    const handleOrder = () => {
+        fetch('http://localhost:5055/addOrder', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => {
+            console.log('server side: ', res);
+        })
+    }
+
     console.log(beverage);
     const {_id, name, imageURL, price} = beverage;
 
@@ -36,7 +59,7 @@ const Checkout = () => {
                     </tbody>
                 </table>
             </div>
-            <button className="btn btn-success">Checkout</button>
+            <button className="btn btn-success" onClick={handleOrder}>Checkout</button>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Beverage from '../Beverage/Beverage';
-import gif from '../../images/giphy.gif';
+import gif from '../../images/giphy-4.gif';
 import './Home.css';
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
             }
             <div className="row">
             {
-                
                 beverages.map(beverage => <Beverage beverage={beverage}></Beverage>)
             }
         </div>

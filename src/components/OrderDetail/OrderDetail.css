@@ -1,0 +1,19 @@
+.order-container{
+    border: 1px solid red;
+    /* margin: 10px auto; */
+    margin: 15px auto;
+    padding: 5px;
+}
+.order-image img{
+    width: 200px;
+    height: 200px;
+}
+.order-image{
+    border: 1px solid black;
+    width: 250px;
+}
+.order-text{
+    border: 1px solid purple;
+    width: 400px;
+    margin-left: 5px;
+}
