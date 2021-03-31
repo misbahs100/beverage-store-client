@@ -11,9 +11,17 @@ import AddBeverage from './components/AddBeverage/AddBeverage';
 import Header from './components/Header/Header';
 import Admin from './components/Admin/Admin';
 import Checkout from './components/Checkout/Checkout';
+import Login from './components/Login/Login';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <h3>name:{loggedInUser.name}</h3>
     <Router>
       <Header></Header>
       <Switch>
@@ -23,17 +31,22 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <Route path="/admin">
-          <Admin></Admin>
+        <Route path="/login">
+          <Login></Login>
         </Route>
+        <PrivateRoute path="/admin">
+          <Admin></Admin>
+        </PrivateRoute>
         <Route path="/addBeverage">
           <AddBeverage></AddBeverage>
         </Route>
-        <Route path="/checkout/:id">
+        <PrivateRoute path="/checkout/:id">
           <Checkout></Checkout>
-        </Route>
+        </PrivateRoute>
+        
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 
