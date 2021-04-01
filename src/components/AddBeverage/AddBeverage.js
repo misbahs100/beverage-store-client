@@ -2,6 +2,8 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useState } from 'react';
+import './AddBeverage.css';
+import SideNav from '../SideNav/SideNav';
 
 
 const AddBeverage = () => {
@@ -48,18 +50,38 @@ const AddBeverage = () => {
     }
 
     return (
-        <div>
-            <h2>This is add.</h2>
+        <div className="d-flex addBeverage">
+            <SideNav></SideNav>
+            
+            
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="name" ref={register} placeholder="Bevereage Name"/>
-                <br/>
-                <input name="price" ref={register} placeholder="Bevereage Price"/>
-                <br/>
-                <input name="exampleRequired" type="file" ref={register} onChange={handleImageUpload}/>
-                <br/>
-                <input type="submit" value="Save"/>
+            <h1>Add Beverage here.</h1>
+                <div className="form-container">
+                   <div className="namePrice">
+                   <div>
+                   <label htmlFor="">Beverage Name</label><br/>
+                    <input name="name" ref={register} placeholder="Enter Name"/>
+                   </div>
+                    
+                    <div className="price">
+                    <label htmlFor="">Add Price</label><br/>
+                    <input name="price" ref={register} placeholder="Enter Price"/>
+                    </div>
+                   </div>
+                    <br/>
+                    <div className="mt-2">
+                    <label htmlFor="">Add Photo</label><br/>
+                    <input name="file" type="file" ref={register} onChange={handleImageUpload}/>
+                    </div>
+                    <br/>
+                    
+                </div>
+                {/* <input className="" type="submit" value="Save"/> */}
+                <button className="btn btn-success mt-2" type="submit">Save</button>
             </form>
         </div>
+            
+        
     );
 };
 

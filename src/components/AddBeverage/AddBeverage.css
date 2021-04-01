@@ -1,0 +1,56 @@
+.addBeverage h1{
+    margin-top: 15px;
+    margin-left: 55px;
+}
+.form-container{
+    padding: 15px;
+    display: block;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background-color: white;
+    width: 125%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+body{
+    background-color: rgb(211, 231, 238);
+}
+.namePrice{
+    display: flex;
+}
+.price{
+    margin-left: 50px;
+}
+.form-container input{
+    width: 250px;
+}
+.form-container label{
+    font-weight: 700;
+}
+.form-container input[name="file"]{
+   
+}
+button{
+    width: 100px;
+    margin-left: 10%;
+}
+@media only screen and (max-width: 600px){
+    .form-container input{
+        display: block;
+    }
+    .namePrice{
+        display: block;
+    }
+    .form-container{
+        width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .price{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    button{
+        margin-left: 5%;
+    }
+}

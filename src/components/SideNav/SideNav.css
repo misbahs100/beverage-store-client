@@ -1,0 +1,19 @@
+.sideNav{
+    /* border: 1px solid red; */
+    border-right: 1px solid gray;
+    width: 20%;
+    height: 93vh;
+    /* background-color: rgba(15, 188, 194, 0.89); */
+    background-color: rgb(211, 231, 238);
+}
+.sideNav button{
+    width: 100%;
+    margin-top: 10px;
+    height: 60px;
+    margin-left: 0;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+.sideNav button:hover{
+    background-color: rgb(162, 180, 187);
+}

@@ -12,7 +12,7 @@ const Home = () => {
         .then(data => setBeverages(data))
     }, [])
     return (
-        <div className="container">
+        <div className="container home">
             {
                 beverages.length === 0 && <div className="loading-spinner"><img src={gif} alt=""/></div> 
             }
