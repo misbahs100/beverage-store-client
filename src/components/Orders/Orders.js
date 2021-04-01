@@ -16,6 +16,7 @@ const Orders = () => {
     }, [])
     return (
         <div className="container">
+            <h2 className="text-center mt-5">Hello {loggedInUser.name}, You have ordered {orders.length} beverages.</h2>
             <div className="row">
             {
                 orders.map(order => <OrderDetail order={order}></OrderDetail>)
