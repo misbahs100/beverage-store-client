@@ -8,7 +8,7 @@ const Home = () => {
     const [beverages, setBeverages] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5055/beverages')
+        fetch('https://apple-cupcake-46761.herokuapp.com/beverages')
         .then(res => res.json())
         .then(data => setBeverages(data))
     }, [])

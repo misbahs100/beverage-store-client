@@ -8,7 +8,7 @@ const ManageBeverage = () => {
     const [beverages, setBeverages] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5055/beverages')
+        fetch('https://apple-cupcake-46761.herokuapp.com/beverages')
         .then(res => res.json())
         .then(data => {
             setBeverages(data);
@@ -17,7 +17,7 @@ const ManageBeverage = () => {
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5055/beverages/deleteBeverage/${id}`, {
+        fetch(`https://apple-cupcake-46761.herokuapp.com/beverages/deleteBeverage/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

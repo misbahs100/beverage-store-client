@@ -8,7 +8,7 @@ const Checkout = () => {
     const {id} = useParams();
     const [beverage, setBeverage] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5055/beverage/${id}`)
+        fetch(`https://apple-cupcake-46761.herokuapp.com/beverage/${id}`)
         .then(res => res.json())
         .then(data => setBeverage(data))
     }, [])
@@ -23,7 +23,7 @@ const Checkout = () => {
     
 
     const handleOrder = () => {
-        fetch('http://localhost:5055/addOrder', {
+        fetch('https://apple-cupcake-46761.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -3,7 +3,7 @@ import './OrderDetail.css';
 
 const OrderDetail = ({order}) => {
     const handleRemove = () => {
-        fetch(`http://localhost:5055/orders/deleteBeverage/${order._id}`, {
+        fetch(`https://apple-cupcake-46761.herokuapp.com/orders/deleteBeverage/${order._id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

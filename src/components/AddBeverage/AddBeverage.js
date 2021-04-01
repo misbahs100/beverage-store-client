@@ -17,7 +17,7 @@ const AddBeverage = () => {
             price: data.price
         }
         console.log(beverageData)
-        fetch('http://localhost:5055/addBeverage', {
+        fetch('https://apple-cupcake-46761.herokuapp.com/addBeverage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
