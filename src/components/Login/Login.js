@@ -6,6 +6,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
+import Header from '../Header/Header';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -45,11 +46,12 @@ const Login = () => {
 
 
     return (
-        <div className="container">
-            <button className="btn login d-flex align-items-center" onClick={handleSignInWithGoogle}>
-            <img src={googlePic} alt=""/>
-            <h3>Login with Google</h3>
-        </button>
+        <div className="container ">
+            
+            <button className="btn login align-items-center" onClick={handleSignInWithGoogle}>
+                <div><img src={googlePic} alt="" /></div>
+                <div><h3>Login with Google</h3></div>
+            </button>
         </div>
     );
 };

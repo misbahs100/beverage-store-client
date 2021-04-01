@@ -16,6 +16,8 @@ import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Orders from './components/Orders/Orders';
 import NothingFound from './components/NothingFound/NothingFound';
+import About from './components/About/About';
+import ManageBeverage from './components/ManageBeverage/ManageBeverage';
 
 export const UserContext = createContext();
 
@@ -24,7 +26,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
-      <Header></Header>
+    <Header></Header>
       <Switch>
         <Route exact path="/">
           <Home></Home>
@@ -35,19 +37,24 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <Route path="/addBeverage">
-          <AddBeverage></AddBeverage>
+        <Route path="/about">
+          <About></About>
         </Route>
+        <PrivateRoute path="/addBeverage">
+          <AddBeverage></AddBeverage>
+        </PrivateRoute>
         <PrivateRoute path="/admin">
           <Admin></Admin>
         </PrivateRoute>
-        
         <PrivateRoute path="/checkout/:id">
           <Checkout></Checkout>
         </PrivateRoute>
         <PrivateRoute path="/orders">
           <Orders></Orders>
         </PrivateRoute>
+        <Route path="/manageBeverage">
+          <ManageBeverage></ManageBeverage>
+        </Route>
         <Route path="*">
           <NothingFound></NothingFound>
         </Route>

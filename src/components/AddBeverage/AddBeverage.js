@@ -55,7 +55,7 @@ const AddBeverage = () => {
             
             
             <form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Add Beverage here.</h1>
+            <h1 className="mt-5 ml-5">Add Beverage here.</h1>
                 <div className="form-container">
                    <div className="namePrice">
                    <div>
@@ -77,7 +77,7 @@ const AddBeverage = () => {
                     
                 </div>
                 {/* <input className="" type="submit" value="Save"/> */}
-                <button className="btn btn-success mt-2" type="submit">Save</button>
+                <button className="btn btn-success mt-2 addBtn" type="submit">Save</button>
             </form>
         </div>
             

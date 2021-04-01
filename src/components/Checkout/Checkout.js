@@ -64,7 +64,7 @@ const Checkout = () => {
                     </tbody>
                 </table>
             </div>
-            <button className="btn btn-success" onClick={handleOrder}>Checkout</button>
+            <button className="btn btn-success checkoutBtn" onClick={handleOrder}>Checkout</button>
         </div>
     );
 };

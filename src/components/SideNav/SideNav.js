@@ -8,7 +8,7 @@ const SideNav = () => {
     return (
         <div className="sideNav">
                 <div className="mt-5">
-                    <Link><button className="btn"><FontAwesomeIcon icon={faTasks} /> Manage Beverage</button></Link>
+                    <Link to="/manageBeverage"><button className="btn"><FontAwesomeIcon icon={faTasks} /> Manage Beverage</button></Link>
                     <br />
                     <Link to="/addBeverage"><button className="btn"><FontAwesomeIcon icon={faPlus} /> Add Beverage</button> </Link>
                     <br />

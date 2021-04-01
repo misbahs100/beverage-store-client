@@ -3,7 +3,7 @@ import './OrderDetail.css';
 
 const OrderDetail = ({order}) => {
     const handleRemove = () => {
-        fetch(`http://localhost:5055/deleteBeverage/${order._id}`, {
+        fetch(`http://localhost:5055/orders/deleteBeverage/${order._id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
