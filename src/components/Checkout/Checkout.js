@@ -17,8 +17,10 @@ const Checkout = () => {
         email: loggedInUser.email,
         beverageName: beverage.name,
         beveragePrice: beverage.price,
-        beverageImage: beverage.imageURL
+        beverageImage: beverage.imageURL,
+        orderTime: new Date().toDateString()        
     }
+    
 
     const handleOrder = () => {
         fetch('http://localhost:5055/addOrder', {
@@ -29,8 +31,11 @@ const Checkout = () => {
             body: JSON.stringify(order)
         })
         .then(res => {
+            
             console.log('server side: ', res);
+            
         })
+        alert('Beverage ordered Successfully.')
     }
 
     console.log(beverage);
