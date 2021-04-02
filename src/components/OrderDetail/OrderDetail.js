@@ -1,5 +1,7 @@
 import React from 'react';
 import './OrderDetail.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const OrderDetail = ({order}) => {
     const handleRemove = () => {
@@ -24,7 +26,7 @@ const OrderDetail = ({order}) => {
                 <h3>Beverage Name: {beverageName}</h3>
                 <h3>Price: {beveragePrice}</h3>
                 <p>Time of order: {orderTime}</p>
-                <button className="btn btn-success" onClick={handleRemove}>Remove</button>
+                <button className="btn btn-success" onClick={handleRemove}><FontAwesomeIcon icon={faTrashAlt} /> Remove</button>
             </div>
         </div>
     );
