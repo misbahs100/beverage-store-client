@@ -3,6 +3,7 @@ import SideNav from '../SideNav/SideNav';
 import './ManageBeverage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import gif from '../../images/giphy-8.gif';
 
 const ManageBeverage = () => {
     const [beverages, setBeverages] = useState([]);
@@ -43,6 +44,9 @@ const ManageBeverage = () => {
                             </tr>
                         </thead>
                         <tbody>
+                            {
+                                beverages.length === 0 && <div className="loading-spinner"><img src={gif} alt="" /></div>
+                            }
 
                             {
                                 beverages.map(beverage => <tr>

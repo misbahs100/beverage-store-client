@@ -31,8 +31,8 @@
 }
 .form-container input{
     border: none;
-    border-bottom: 1px solid gray;
-    box-shadow: 2px 2px 2px gray;
+    border-bottom: 3px solid gray;
+    /* box-shadow: 2px 2px 2px gray; */
 }
 .addBtn{
     width: 100px;
@@ -54,7 +54,9 @@
         margin-top: 30px;
         margin-left: 0;
     }
-    button{
-        margin-left: 5%;
+    .addBtn{
+        width: 80%;
+        margin-bottom: 10px;
     }
+    
 }

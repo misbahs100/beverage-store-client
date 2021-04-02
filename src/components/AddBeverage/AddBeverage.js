@@ -52,13 +52,13 @@ const AddBeverage = () => {
     }
 
     return (
-        <div className="d-flex addBeverage">
+        <div className="d-flex addBeverage text-white">
             <SideNav></SideNav>
             
             
             <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className="mt-5 ml-5">Add Beverage here.</h1>
-                <div className="form-container">
+                <div className="form-container bg-dark">
                     {/* 1st div */}
                    <div className="namePrice">
                    <div>
