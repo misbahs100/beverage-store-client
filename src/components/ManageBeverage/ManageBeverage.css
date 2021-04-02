@@ -1,5 +1,11 @@
 .manageBeverage{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
-    
+    color: white;
+}
+.manageBeverage table{
+    color: white;
+}
+.manageBeverage table tr:hover{
+    background-color: #434b58;
 }

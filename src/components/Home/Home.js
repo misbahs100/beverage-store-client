@@ -13,15 +13,13 @@ const Home = () => {
             .then(data => setBeverages(data))
     }, [])
     return (
-        <div className="container home">
+        <div className="container home mt-5">
 
             {
                 beverages.length === 0 && <div className="loading-spinner"><img src={gif} alt="" /></div>
             }
 
             <div className="row">
-
-                {/*  */}
                 <div class="container page-wrapper">
                     <div class="page-inner">
                         <div class="row">
@@ -31,12 +29,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
+            
         </div>
     );
 };

@@ -7,18 +7,20 @@
     /* padding: 5px; */
     margin-top: 20%;
     border: 1px solid gray;
-    background-color: white;
+    background-color: black;
     width: 40%;
     margin-left: 30%;
     border-radius: 10px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     cursor: pointer;
+    color: white;
 }
 .login h3{
     margin-left: 20px;
 }
 .login:hover{
-    background-color: rgb(211, 209, 209);
+    background-color: #434b58;
 }
 @media only screen and (max-width: 600px){
     .login{

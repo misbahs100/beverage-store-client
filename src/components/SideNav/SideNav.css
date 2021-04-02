@@ -2,9 +2,10 @@
     /* border: 1px solid red; */
     border-right: 1px solid gray;
     width: 20%;
+    min-height: 100vh;
     /* height: 93vh; */
     /* background-color: rgba(15, 188, 194, 0.89); */
-    background-color: rgb(211, 231, 238);
+    /* background-color: rgb(211, 231, 238); */
 }
 .sideNav button{
     width: 100%;
@@ -13,7 +14,9 @@
     margin-left: 0;
     border-bottom: 1px solid gray;
     padding: 5px;
+    color: white;
 }
 .sideNav button:hover{
-    background-color: rgb(162, 180, 187);
+    background-color: #434b58;
+    color: white;
 }

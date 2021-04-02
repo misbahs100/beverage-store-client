@@ -26,8 +26,13 @@
 .form-container label{
     font-weight: 700;
 }
-.form-container input[name="file"]{
+.form-container input[name=""]{
    
+}
+.form-container input{
+    border: none;
+    border-bottom: 1px solid gray;
+    box-shadow: 2px 2px 2px gray;
 }
 .addBtn{
     width: 100px;

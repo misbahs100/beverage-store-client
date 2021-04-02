@@ -11,9 +11,9 @@ const Beverage = ({ beverage }) => {
                 <div class="img-info">
                     <div class="info-inner">
                         <span class="p-name">{beverage.name}</span>
-                        <span class="p-company">name is oscar bro</span>
+                        <span class="p-company">{beverage.description}</span>
                     </div>
-                    <div class="a-size">Available at : <span class="size">Full Country</span></div>
+                    <div class="a-size">Available at : <span class="size">{beverage.availablePlace}</span></div>
                 </div>
             </div>
 

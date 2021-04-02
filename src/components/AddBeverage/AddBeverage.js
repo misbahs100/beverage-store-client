@@ -14,7 +14,9 @@ const AddBeverage = () => {
         const beverageData = {
             name: data.name,
             imageURL: imageURL,
-            price: data.price
+            price: data.price,
+            description: data.description,
+            availablePlace: data.availablePlace
         }
         console.log(beverageData)
         fetch('https://apple-cupcake-46761.herokuapp.com/addBeverage', {
@@ -57,6 +59,7 @@ const AddBeverage = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className="mt-5 ml-5">Add Beverage here.</h1>
                 <div className="form-container">
+                    {/* 1st div */}
                    <div className="namePrice">
                    <div>
                    <label htmlFor="">Beverage Name</label><br/>
@@ -68,7 +71,23 @@ const AddBeverage = () => {
                     <input name="price" ref={register} placeholder="Enter Price"/>
                     </div>
                    </div>
+
                     <br/>
+                    {/* 2nd div */}
+                   <div className="namePrice mt-3">
+                   <div>
+                   <label htmlFor="">Beverage Dialogue(Description)</label><br/>
+                    <input name="description" ref={register} placeholder="Enter description"/>
+                   </div>
+                    
+                    <div className="price">
+                    <label htmlFor="">Available shop</label><br/>
+                    <input name="availablePlace" ref={register} placeholder="e.g. Dhaka.."/>
+                    </div>
+                   </div>
+
+                    <br/>
+                    {/* 3rd div */}
                     <div className="mt-2">
                     <label htmlFor="">Add Photo</label><br/>
                     <input name="file" type="file" ref={register} onChange={handleImageUpload}/>

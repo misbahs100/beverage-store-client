@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import './Login.css';
-import googlePic from '../../images/google.png';
+import googlePic from '../../images/google-2.png';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
-import Header from '../Header/Header';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
