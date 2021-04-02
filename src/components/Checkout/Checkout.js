@@ -43,9 +43,9 @@ const Checkout = () => {
 
     return (
         <div className="container">
-            <h1 className="mt-5">Checkout</h1>
-            <div className="checkout-container">
-                <table className="table">
+            <h1 className="mt-5 text-white">Checkout</h1>
+            <div className="checkout-container bg-dark">
+                <table className="table table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Beverage ID</th>
