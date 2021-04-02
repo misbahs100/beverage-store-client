@@ -13,8 +13,6 @@ if (!firebase.apps.length) {
     firebase.app(); // if already initialized, use that one
 }
 
-
-
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
@@ -35,7 +33,6 @@ const Login = () => {
                 }
                 setLoggedInUser(newUser)
                 history.replace(from);
-                // return user;
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -43,10 +40,9 @@ const Login = () => {
             });
     }
 
-
     return (
         <div className="container ">
-            
+
             <button className="btn login align-items-center" onClick={handleSignInWithGoogle}>
                 <div><img src={googlePic} alt="" /></div>
                 <div><h3>Login with Google</h3></div>

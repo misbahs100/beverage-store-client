@@ -5,22 +5,21 @@ import './Checkout.css';
 
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const {id} = useParams();
+    const { id } = useParams();
     const [beverage, setBeverage] = useState({});
     useEffect(() => {
         fetch(`https://apple-cupcake-46761.herokuapp.com/beverage/${id}`)
-        .then(res => res.json())
-        .then(data => setBeverage(data))
-    }, [])
+            .then(res => res.json())
+            .then(data => setBeverage(data))
+    }, [id])
 
     const order = {
         email: loggedInUser.email,
         beverageName: beverage.name,
         beveragePrice: beverage.price,
         beverageImage: beverage.imageURL,
-        orderTime: new Date().toDateString()        
+        orderTime: new Date().toDateString()
     }
-    
 
     const handleOrder = () => {
         fetch('https://apple-cupcake-46761.herokuapp.com/addOrder', {
@@ -30,16 +29,15 @@ const Checkout = () => {
             },
             body: JSON.stringify(order)
         })
-        .then(res => {
-            
-            console.log('server side: ', res);
-            
-        })
+            .then(res => {
+
+                console.log('server side: ', res);
+
+            })
         alert('Beverage ordered Successfully.')
     }
 
-    console.log(beverage);
-    const {_id, name, imageURL, price} = beverage;
+    const { _id, name, imageURL, price } = beverage;
 
     return (
         <div className="container">
@@ -58,7 +56,7 @@ const Checkout = () => {
                         <tr>
                             <th scope="row">{_id}</th>
                             <td>{name}</td>
-                            <td><input type="text" placeholder=" Enter Quantity"/></td>
+                            <td><input type="text" placeholder=" Enter Quantity" /></td>
                             <td>{price}</td>
                         </tr>
                     </tbody>

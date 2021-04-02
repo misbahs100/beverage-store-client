@@ -1,9 +1,4 @@
 .loading-spinner{
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px; */
     margin: auto auto;
     margin-top: 20%;
     /* border: 1px solid red; */
@@ -12,10 +7,7 @@
     width: 20%;
 }
 body{
-    /* background-color: rgb(211, 231, 238); */
-    /* background-color: white; */
     background-color: #24282f;
-    
   }
 @media only screen and (max-width: 600px){
     .loading-spinner{
@@ -24,7 +16,7 @@ body{
 }
 
 
-/* extra dhong */
+/* css for home cards */
 
 .flex-centerY-centerX {
     justify-content: center;

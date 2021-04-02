@@ -3,9 +3,6 @@
     border-right: 1px solid gray;
     width: 20%;
     min-height: 100vh;
-    /* height: 93vh; */
-    /* background-color: rgba(15, 188, 194, 0.89); */
-    /* background-color: rgb(211, 231, 238); */
 }
 .sideNav button{
     width: 100%;

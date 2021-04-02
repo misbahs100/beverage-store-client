@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import AddBeverage from './components/AddBeverage/AddBeverage';
@@ -25,41 +24,41 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-    <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/about">
-          <About></About>
-        </Route>
-        <PrivateRoute path="/addBeverage">
-          <AddBeverage></AddBeverage>
-        </PrivateRoute>
-        <PrivateRoute path="/admin">
-          <Admin></Admin>
-        </PrivateRoute>
-        <PrivateRoute path="/checkout/:id">
-          <Checkout></Checkout>
-        </PrivateRoute>
-        <PrivateRoute path="/orders">
-          <Orders></Orders>
-        </PrivateRoute>
-        <Route path="/manageBeverage">
-          <ManageBeverage></ManageBeverage>
-        </Route>
-        <Route path="*">
-          <NothingFound></NothingFound>
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <PrivateRoute path="/addBeverage">
+            <AddBeverage></AddBeverage>
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <Admin></Admin>
+          </PrivateRoute>
+          <PrivateRoute path="/checkout/:id">
+            <Checkout></Checkout>
+          </PrivateRoute>
+          <PrivateRoute path="/orders">
+            <Orders></Orders>
+          </PrivateRoute>
+          <Route path="/manageBeverage">
+            <ManageBeverage></ManageBeverage>
+          </Route>
+          <Route path="*">
+            <NothingFound></NothingFound>
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

@@ -7,8 +7,7 @@ const Admin = () => {
     return (
         <div className="d-flex">
             <SideNav></SideNav>
-            
-
+            <h1 className="mt-5 ml-5 text-white ">Please select any option from left menu.</h1>
         </div>
     );
 };

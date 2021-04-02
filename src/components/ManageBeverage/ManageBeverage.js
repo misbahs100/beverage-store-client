@@ -13,7 +13,6 @@ const ManageBeverage = () => {
             .then(res => res.json())
             .then(data => {
                 setBeverages(data);
-                console.log(data)
             })
     }, [])
 
@@ -23,7 +22,6 @@ const ManageBeverage = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 alert('One beverage deleted.')
             })
     }

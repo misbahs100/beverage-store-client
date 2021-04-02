@@ -12,7 +12,7 @@ const Header = () => {
         <div>
             <nav class="navbar navbar-expand-lg navbar-light header-text">
                 <div class="container-fluid">
-                    <Link to="/home" class="navbar-brand text-white navbarLogo" ><img src={logo} alt=""/> BEVERAGE STORE</Link>
+                    <Link to="/home" class="navbar-brand text-white navbarLogo" ><img src={logo} alt="" /> BEVERAGE STORE</Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -24,12 +24,12 @@ const Header = () => {
                             <Link to="/about" class="nav-link active text-white mr-3">About</Link>
                             {
                                 loggedInUser.email
-                                ? <Link to="/login" class="nav-link active text-white">{loggedInUser.name}</Link>
-                                : <Link to="/login" class="nav-link active text-white">Login</Link>
+                                    ? <Link to="/login" class="nav-link active text-white">{loggedInUser.name}</Link>
+                                    : <Link to="/login" class="nav-link active text-white">Login</Link>
                             }
                         </div>
                     </div>
-                </div> 
+                </div>
             </nav>
         </div>
     );

@@ -3,7 +3,6 @@ import Beverage from '../Beverage/Beverage';
 import gif from '../../images/giphy-8.gif';
 import './Home.css';
 
-
 const Home = () => {
     const [beverages, setBeverages] = useState([]);
 
@@ -30,7 +29,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            
+
         </div>
     );
 };

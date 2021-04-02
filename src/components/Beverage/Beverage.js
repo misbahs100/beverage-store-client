@@ -22,7 +22,6 @@ const Beverage = ({ beverage }) => {
                     <div class="h-bg-inner"></div>
                 </div>
 
-
                 <Link to={`checkout/${beverage._id}`}>
                     <button class="cart btn" >
                         <span class="price">{beverage.price}</span>
