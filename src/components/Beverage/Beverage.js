@@ -2,25 +2,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Beverage.css';
 
-const Beverage = ({beverage}) => {
+const Beverage = ({ beverage }) => {
     console.log(beverage)
     return (
-        <div className="col-md-4  d-flex justify-content-center">
-            <div className="beverage-container">
-                
-                <div className=" d-flex justify-content-center"><img  style={{height: '150px', width: '200px', marginTop: '20px'}} src={beverage.imageURL} alt=""/></div>
-                
-                <h3 className="text-center">{beverage.name}</h3>
-                <div className="d-flex justify-content-between p-2">
-                  <h3 className="text-primary">{beverage.price}</h3>
-                  <Link to={`checkout/${beverage._id}`}>
-                  <button className="btn btn-primary beverage-btn">Buy</button>
-                  </Link>
+        <div class="el-wrapper">
+            <div class="box-up">
+                <img class="img" src={beverage.imageURL} alt="" />
+                <div class="img-info">
+                    <div class="info-inner">
+                        <span class="p-name">{beverage.name}</span>
+                        <span class="p-company">name is oscar bro</span>
+                    </div>
+                    <div class="a-size">Available at : <span class="size">Full Country</span></div>
                 </div>
-                
             </div>
-            
-            
+
+            <div class="box-down">
+                <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                </div>
+
+
+                <Link to={`checkout/${beverage._id}`}>
+                    <button class="cart btn" >
+                        <span class="price">{beverage.price}</span>
+                        <span class="add-to-cart">
+                            <span class="txt">Add in order</span>
+                        </span>
+                    </button>
+                </Link>
+
+            </div>
         </div>
     );
 };

@@ -21,12 +21,20 @@ const Home = () => {
             }
 
             <div className="row">
-                {
-                    beverages.map(beverage => <Beverage beverage={beverage}></Beverage>)
-                }
-                {/*  */}
 
-               
+                {/*  */}
+                <div class="container page-wrapper">
+                    <div class="page-inner">
+                        <div class="row">
+                            {
+                                beverages.map(beverage => <Beverage beverage={beverage}></Beverage>)
+                            }
+                        </div>
+                    </div>
+                </div>
+
+
+
 
 
             </div>
