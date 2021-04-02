@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Beverage from '../Beverage/Beverage';
-import gif from '../../images/giphy-4.gif';
+import gif from '../../images/giphy-8.gif';
 import './Home.css';
-import Header from '../Header/Header';
-import image from '../../images/oscar.jpeg';
+
 
 const Home = () => {
     const [beverages, setBeverages] = useState([]);
