@@ -13,8 +13,9 @@ const Orders = () => {
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
-            })
+            }) 
     }, [loggedInUser.email])
+    
     return (
         <div className="container">
             <h2 className="text-center mt-5 text-white">Hello {loggedInUser.name}, You have ordered {orders.length} beverages.</h2>
